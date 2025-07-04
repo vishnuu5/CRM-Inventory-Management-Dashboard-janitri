@@ -75,6 +75,11 @@ A comprehensive web application for managing medical device inventories, trackin
 
 ### Setup Instructions
 
+## Demo Assignment
+
+**CRM + Inventory Management Dashboard**
+[Click-Here](https://crm-inventory-management-dashboard.vercel.app)
+
 1. **Clone the repository**
 
 ```bash
