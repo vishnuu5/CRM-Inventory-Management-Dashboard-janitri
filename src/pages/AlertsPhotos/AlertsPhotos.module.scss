@@ -1,0 +1,245 @@
+.alertsPhotos {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+
+  .summaryCard {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 4px solid #1976d2;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .MuiCardContent-root {
+      width: 100%;
+      text-align: center;
+
+      h6 {
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+
+      h3 {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .tableContainer {
+    padding: 24px;
+    min-height: 500px;
+    width: 100%;
+
+    .MuiDataGrid-root {
+      border: none;
+
+      .MuiDataGrid-cell {
+        border-bottom: 1px solid #e0e0e0;
+        padding: 12px 16px;
+      }
+
+      .MuiDataGrid-columnHeaders {
+        background-color: #fafafa;
+        border-bottom: 2px solid #e0e0e0;
+        font-weight: 600;
+      }
+
+      .MuiDataGrid-row {
+        &:hover {
+          background-color: #f5f5f5;
+        }
+      }
+    }
+  }
+
+  .photoGallery {
+    padding: 32px;
+    min-height: 600px;
+    width: 100%;
+
+    .MuiImageList-root {
+      width: 100%;
+
+      .MuiImageListItem-root {
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.02);
+        }
+
+        img {
+          transition: transform 0.3s;
+        }
+
+        &:hover img {
+          transform: scale(1.1);
+        }
+      }
+
+      .MuiImageListItemBar-root {
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.7) 0%,
+          rgba(0, 0, 0, 0.3) 70%,
+          rgba(0, 0, 0, 0) 100%
+        );
+
+        .MuiImageListItemBar-title {
+          font-weight: 600;
+        }
+
+        .MuiImageListItemBar-subtitle {
+          font-weight: 400;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  // Enhanced Dialog Styling
+  .MuiDialog-paper {
+    min-width: 600px;
+    max-width: 900px;
+
+    .MuiDialogContent-root {
+      padding: 24px;
+      min-height: 400px;
+
+      .MuiGrid-container {
+        width: 100%;
+        margin: 0;
+
+        .MuiGrid-item {
+          padding: 12px;
+
+          .MuiTextField-root {
+            min-width: 200px;
+
+            .MuiInputBase-root {
+              min-height: 56px;
+
+              &.MuiInputBase-multiline {
+                min-height: auto;
+              }
+            }
+
+            .MuiInputLabel-root {
+              font-weight: 500;
+            }
+
+            .MuiOutlinedInput-root {
+              border-radius: 8px;
+
+              &:hover .MuiOutlinedInput-notchedOutline {
+                border-color: #1976d2;
+              }
+
+              &.Mui-focused .MuiOutlinedInput-notchedOutline {
+                border-width: 2px;
+              }
+            }
+          }
+
+          .MuiButton-root {
+            min-height: 48px;
+            font-weight: 500;
+            border-radius: 8px;
+
+            &.MuiButton-outlined {
+              border-width: 2px;
+
+              &:hover {
+                border-width: 2px;
+                background-color: rgba(25, 118, 210, 0.04);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .photoGallery {
+      .MuiImageList-root {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .tableContainer {
+      padding: 16px;
+    }
+
+    .photoGallery {
+      padding: 24px;
+
+      .MuiImageList-root {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+
+    .summaryCard {
+      height: 120px;
+    }
+
+    .MuiDialog-paper {
+      min-width: 90vw;
+      margin: 16px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .tableContainer {
+      padding: 12px;
+    }
+
+    .photoGallery {
+      padding: 16px;
+
+      .MuiImageList-root {
+        grid-template-columns: repeat(1, 1fr) !important;
+      }
+    }
+
+    .summaryCard {
+      height: 100px;
+
+      .MuiCardContent-root {
+        h6 {
+          font-size: 0.9rem;
+        }
+
+        h3 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .MuiDialog-paper {
+      min-width: 95vw;
+      margin: 8px;
+
+      .MuiDialogContent-root {
+        padding: 16px;
+
+        .MuiGrid-item {
+          padding: 8px;
+
+          .MuiTextField-root {
+            min-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

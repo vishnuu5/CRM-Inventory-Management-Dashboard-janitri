@@ -1,0 +1,175 @@
+.installation {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+
+  .stepperContainer {
+    padding: 24px;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+    .MuiStepper-root {
+      .MuiStepLabel-label {
+        font-weight: 500;
+
+        &.Mui-active {
+          font-weight: 600;
+          color: #1976d2;
+        }
+
+        &.Mui-completed {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .contentContainer {
+    padding: 40px;
+    min-height: 500px;
+    width: 100%;
+
+    .MuiGrid-container {
+      width: 100%;
+      margin: 0;
+
+      .MuiGrid-item {
+        padding: 16px;
+
+        .MuiTextField-root {
+          margin-bottom: 16px;
+          min-width: 250px;
+
+          .MuiInputBase-root {
+            min-height: 56px;
+
+            &.MuiInputBase-multiline {
+              min-height: auto;
+            }
+          }
+
+          .MuiInputLabel-root {
+            font-weight: 500;
+            font-size: 1rem;
+          }
+
+          .MuiOutlinedInput-root {
+            border-radius: 8px;
+
+            &:hover .MuiOutlinedInput-notchedOutline {
+              border-color: #1976d2;
+            }
+
+            &.Mui-focused .MuiOutlinedInput-notchedOutline {
+              border-width: 2px;
+            }
+          }
+        }
+
+        .MuiButton-root {
+          min-height: 48px;
+          font-weight: 500;
+          border-radius: 8px;
+
+          &.MuiButton-contained {
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+
+            &:hover {
+              box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4);
+            }
+          }
+
+          &.MuiButton-outlined {
+            border-width: 2px;
+
+            &:hover {
+              border-width: 2px;
+              background-color: rgba(25, 118, 210, 0.04);
+            }
+          }
+        }
+      }
+    }
+
+    // Special styling for full-width fields
+    .MuiGrid-item:has(.MuiTextField-root[multiline]) {
+      .MuiTextField-root {
+        min-width: 100%;
+      }
+    }
+
+    // Checklist styling
+    .MuiFormControlLabel-root {
+      margin: 8px 0;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
+
+      .MuiCheckbox-root {
+        color: #1976d2;
+
+        &.Mui-checked {
+          color: #1976d2;
+        }
+      }
+
+      .MuiFormControlLabel-label {
+        font-weight: 500;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .contentContainer {
+      padding: 32px;
+
+      .MuiGrid-item {
+        .MuiTextField-root {
+          min-width: 220px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .stepperContainer {
+      padding: 20px;
+    }
+
+    .contentContainer {
+      padding: 24px;
+
+      .MuiGrid-item {
+        padding: 12px;
+
+        .MuiTextField-root {
+          min-width: 200px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .stepperContainer {
+      padding: 16px;
+    }
+
+    .contentContainer {
+      padding: 16px;
+
+      .MuiGrid-item {
+        padding: 8px;
+
+        .MuiTextField-root {
+          min-width: 100%;
+        }
+      }
+    }
+  }
+}

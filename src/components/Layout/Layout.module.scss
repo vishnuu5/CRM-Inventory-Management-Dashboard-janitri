@@ -1,0 +1,11 @@
+.drawer {
+  .listItemButton {
+    &.Mui-selected {
+      background-color: rgba(25, 118, 210, 0.12);
+
+      .MuiListItemIcon-root {
+        color: #1976d2;
+      }
+    }
+  }
+}

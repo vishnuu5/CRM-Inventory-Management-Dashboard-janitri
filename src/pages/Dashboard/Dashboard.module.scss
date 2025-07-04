@@ -1,0 +1,136 @@
+.dashboard {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+
+  .statCard {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .chartPaper {
+    padding: 24px;
+    height: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    h6 {
+      margin-bottom: 16px;
+      font-weight: 600;
+      color: #333;
+    }
+  }
+
+  .devicesPaper {
+    padding: 24px;
+    width: 100%;
+
+    h6 {
+      margin-bottom: 16px;
+      font-weight: 600;
+      color: #333;
+    }
+  }
+
+  .deviceCard {
+    height: 200px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .MuiCardContent-root {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .statusBadge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &[data-status="online"] {
+      background-color: #e8f5e8;
+      color: #2e7d32;
+      border: 1px solid #4caf50;
+    }
+
+    &[data-status="offline"] {
+      background-color: #ffebee;
+      color: #c62828;
+      border: 1px solid #f44336;
+    }
+
+    &[data-status="maintenance"] {
+      background-color: #fff3e0;
+      color: #ef6c00;
+      border: 1px solid #ff9800;
+    }
+  }
+
+  .batteryProgress {
+    margin-top: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+
+    .MuiLinearProgress-bar {
+      border-radius: 4px;
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 1200px) {
+    .chartPaper {
+      height: 380px;
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .chartPaper {
+      height: 350px;
+      padding: 16px;
+    }
+
+    .deviceCard {
+      height: 180px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .chartPaper {
+      height: 320px;
+      padding: 12px;
+    }
+
+    .deviceCard {
+      height: 160px;
+    }
+
+    .statusBadge {
+      font-size: 0.7rem;
+      padding: 4px 8px;
+    }
+  }
+}

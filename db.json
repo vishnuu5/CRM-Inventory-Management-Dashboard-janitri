@@ -1,0 +1,91 @@
+{
+  "devices": [
+    {
+      "id": "DEV001",
+      "type": "X-Ray Machine",
+      "facilityId": "FAC001",
+      "facilityName": "City Hospital",
+      "status": "Online",
+      "batteryLevel": 85,
+      "lastServiceDate": "2024-01-15",
+      "installationDate": "2023-06-10",
+      "amcStatus": "Active",
+      "location": "Radiology Wing",
+      "serialNumber": "XR2024001"
+    },
+    {
+      "id": "DEV002",
+      "type": "MRI Scanner",
+      "facilityId": "FAC002",
+      "facilityName": "General Hospital",
+      "status": "Maintenance",
+      "batteryLevel": 45,
+      "lastServiceDate": "2024-01-10",
+      "installationDate": "2023-08-20",
+      "amcStatus": "Expiring Soon",
+      "location": "Imaging Department",
+      "serialNumber": "MRI2024002"
+    }
+  ],
+  "facilities": [
+    {
+      "id": "FAC001",
+      "name": "City Hospital",
+      "address": "123 Main St, City",
+      "contactPerson": "Dr. Smith",
+      "phone": "+1-234-567-8900",
+      "email": "contact@cityhospital.com",
+      "deviceCount": 5
+    },
+    {
+      "id": "FAC002",
+      "name": "General Hospital",
+      "address": "456 Oak Ave, Town",
+      "contactPerson": "Dr. Johnson",
+      "phone": "+1-234-567-8901",
+      "email": "info@generalhospital.com",
+      "deviceCount": 3
+    }
+  ],
+  "serviceVisits": [
+    {
+      "id": "SV001",
+      "deviceId": "DEV001",
+      "deviceType": "X-Ray Machine",
+      "facilityName": "City Hospital",
+      "date": "2024-01-15",
+      "engineer": "John Doe",
+      "purpose": "Preventive",
+      "status": "Completed",
+      "notes": "Regular maintenance completed successfully",
+      "attachments": []
+    }
+  ],
+  "amcContracts": [
+    {
+      "id": "AMC001",
+      "deviceId": "DEV001",
+      "deviceType": "X-Ray Machine",
+      "facilityName": "City Hospital",
+      "contractType": "AMC",
+      "startDate": "2023-06-10",
+      "endDate": "2024-06-10",
+      "status": "Active",
+      "cost": 15000,
+      "vendor": "MedTech Solutions"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "ALT001",
+      "deviceId": "DEV002",
+      "deviceType": "MRI Scanner",
+      "facilityName": "General Hospital",
+      "type": "Maintenance Required",
+      "severity": "High",
+      "message": "Device requires immediate maintenance",
+      "date": "2024-01-20",
+      "status": "Open"
+    }
+  ]
+}
